@@ -17,6 +17,23 @@ public class Main {
 
      // Lógica do menu principal
 
+     boolean rodando = true;
+     
+     while (rodando) {
+        // Usando MenuController para mostrar as opções do menu
+        int escolhaFilmeIndex = menuController.selecionarFilme(filmes);
+
+        if (escolhaFilmeIndex != -1) {
+            Filme filmeEscolhido = filmes.get(escolhaFilmeIndex);
+
+            
+        }
+        else{
+            rodando = false;
+             System.out.println("Você saiu"); // O usúario escolheu sair 
+        }
+     }
+     scanner.close();
       }
 }
 

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.ArrayList;
 public class MenuController {
   private Scanner scanner;
     
@@ -8,8 +8,20 @@ public class MenuController {
         this.scanner = new Scanner( System.in) ;
     }
 
-    public void selecionarFilme() {
+    public int selecionarFilme(ArrayList<Filme> filmes) {
         System.out.println("Selecionar um filme:");
+        for (int i = 0; i < filmes.size(); i++) {
+            System.out.println((i+1) + "." +filmes.get(i).getNome());
+            
+        }
+        System.out.println((filmes.size() + 1) + ". Sair");
+        System.out.print("Escolha: ");
+        int escolha = scanner.nextInt();
+        if (escolha <= filmes.size() && escolha > 0) {
+            return escolha - 1; // Retorna o índice do filme selecionado
+        } else {
+            return -1; // Se escolher sair, retorna -1
+        }
     }
 
      public void comprarIngesso() {
