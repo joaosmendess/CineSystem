@@ -50,12 +50,32 @@ public class MenuController {
 
     }
 
-    public void comprarIngesso() {
-        System.out.println("Compra de ingresso:");
+    public Ingresso comprarIngesso(Filme filme, String sessao) {
+        System.out.println("Quantos ingressos inteiros? ");
+        int inteiros = scanner.nextInt();
+        System.out.println("Quantos ingressos de meia-entrada? ");
+        int meias = scanner.nextInt();
+
+        return new Ingresso(filme, inteiros, meias, sessao);
+
     }
 
-    public void exibirResultadoFinal() {
-        System.out.println("Resultado da compra:");
+    public void exibirResultadoFinal(Ingresso ingresso) {
+
+    double total = calcularTotal(ingresso); 
+        System.out.println("Filme: " + ingresso.getFilme().getNome());
+        System.out.println("Sessão" + ingresso.getHorarioSessao());
+        System.out.println("Ingressos inteiros: " + ingresso.getQuantidadeInteira());
+        System.out.println("Ingressos de meia-entrada: " + ingresso.getQuantidadeMeia());
+        System.out.println("Total a pagar" + total);
+    }
+    
+    private double calcularTotal(Ingresso ingresso) {
+
+        final double precoInteiro = 24.0;
+        final double precoMeia = 12.0;
+        return ingresso.getQuantidadeInteira()* precoInteiro + ingresso.getQuantidadeMeia() * precoMeia;
+
     }
 
 }
