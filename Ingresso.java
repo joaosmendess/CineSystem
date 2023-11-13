@@ -1,13 +1,16 @@
 public class Ingresso {
     private Filme filme;
-    private String tipoIngresso;
+    private int quantidadeInteira;    
+    private int quantidadeMeia;                                                                                                  
     private String horarioSessao;
 
 
-    public Ingresso (Filme filme, String tipoIngresso, String horarioSessao) {
+    public Ingresso (Filme filme, int quantidadeInteira, int quantidadeMeia, String horarioSessao) {
         this.filme = filme;
         this.horarioSessao = horarioSessao;
-        this.tipoIngresso= tipoIngresso;
+        this.quantidadeInteira= quantidadeInteira;
+        this.quantidadeMeia= quantidadeMeia;
+
 
     }
 
@@ -21,12 +24,20 @@ public class Ingresso {
         this.filme = filme;
     }
 
-    public String getTipoIngresso() {
-        return tipoIngresso;
+    public int getQuantidadeInteira() {
+        return quantidadeInteira;
     }
 
-    public void setTipoIngresso(String tipoIngresso) {
-        this.tipoIngresso = tipoIngresso;
+    public void setQuantidadeInteira(int quantidadeInteira) {
+        this.quantidadeMeia = quantidadeInteira;
+    }
+
+    public int getQuantidadeMeia() {
+        return quantidadeMeia;
+    }
+
+    public void setQuantidadeMeia(int quantidadeMeia) {
+        this.quantidadeMeia = quantidadeMeia;
     }
 
     public String getHorarioSessao() {
