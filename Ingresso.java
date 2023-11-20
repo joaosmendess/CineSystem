@@ -14,6 +14,10 @@ public class Ingresso {
 
     }
 
+    public void acessoLanchonete() {
+        System.out.println("Compre um ingresso VIP");
+    }
+
     // Getters e Setters
 
     public Filme getFilme() {
