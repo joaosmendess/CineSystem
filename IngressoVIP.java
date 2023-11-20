@@ -18,4 +18,4 @@ public class IngressoVIP extends Ingresso {
         }
     }
 
-} // Verifique se esta chave está fechando a classe corretamente
+} 

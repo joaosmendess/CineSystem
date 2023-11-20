@@ -51,14 +51,23 @@ public class MenuController {
     }
 
     public Ingresso comprarIngesso(Filme filme, String sessao) {
+         System.out.println("Tipo de ingressos: 1. Normal, 2. VIP ");
+        int tipo = scanner.nextInt();
+
         System.out.println("Quantos ingressos inteiros? ");
         int inteiros = scanner.nextInt();
         System.out.println("Quantos ingressos de meia-entrada? ");
         int meias = scanner.nextInt();
-                System.out.println(); 
+                
+        if (tipo == 2) {
+            return new IngressoVIP(filme, inteiros, meias, sessao);
+        } else {
+            return new Ingresso(filme, inteiros, meias, sessao);
+
+        }
 
 
-        return new Ingresso(filme, inteiros, meias, sessao);
+        
         
 
     }
