@@ -67,7 +67,7 @@ public class Filme {
         return filme3D;
     }
 
-    public void setFilme3D () {
+    public void setFilme3D (boolean filme3D) {
         this.filme3D = filme3D;
     }
 }

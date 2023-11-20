@@ -58,6 +58,8 @@ public class MenuController {
         int inteiros = scanner.nextInt();
         System.out.println("Quantos ingressos de meia-entrada? ");
         int meias = scanner.nextInt();
+                System.out.println(); 
+
                 
         if (tipo == 2) {
             return new IngressoVIP(filme, inteiros, meias, sessao);
@@ -65,6 +67,8 @@ public class MenuController {
             return new Ingresso(filme, inteiros, meias, sessao);
 
         }
+        
+        
 
 
         

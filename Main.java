@@ -11,9 +11,9 @@ public class Main {
 
         ArrayList<Filme> filmes = new ArrayList<>();
 
-        filmes.add(new Filme("Matrix", "Lana Wachowski", "Um hacker descobre uma realidade alternativa", "Ficção Científica", 136));
-        filmes.add(new Filme("Star Wars", "George Lucas", "Aventuras em uma galáxia muito distante", "Ficção Científica", 121));
-        filmes.add(new Filme("O Senhor dos Anéis", "Peter Jackson", "Uma jornada épica em um mundo de fantasia", "Fantasia", 178));
+        filmes.add(new Filme("Matrix", "Lana Wachowski", "Um hacker descobre uma realidade alternativa", "Ficção Científica", 136, false));
+        filmes.add(new Filme("Star Wars", "George Lucas", "Aventuras em uma galáxia muito distante", "Ficção Científica", 121, false));
+        filmes.add(new Filme("O Senhor dos Anéis", "Peter Jackson", "Uma jornada épica em um mundo de fantasia", "Fantasia", 178, false));
 
      // Lógica do menu principal
 
