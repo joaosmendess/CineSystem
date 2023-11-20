@@ -85,8 +85,8 @@ public class MenuController {
     
     private double calcularTotal(Ingresso ingresso) {
 
-        final double precoInteiro = 24.00;
-        final double precoMeia = 12.00;
+        final double precoInteiro = ingresso instanceof IngressoVIP ? 48.00 : 12.00;
+        final double precoMeia = ingresso instanceof IngressoVIP ? 24.00 : 12.00;
         return ingresso.getQuantidadeInteira()* precoInteiro + ingresso.getQuantidadeMeia() * precoMeia;
 
     }
