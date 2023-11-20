@@ -55,25 +55,29 @@ public class MenuController {
         int inteiros = scanner.nextInt();
         System.out.println("Quantos ingressos de meia-entrada? ");
         int meias = scanner.nextInt();
+                System.out.println(); 
+
 
         return new Ingresso(filme, inteiros, meias, sessao);
+        
 
     }
 
     public void exibirResultadoFinal(Ingresso ingresso) {
 
     double total = calcularTotal(ingresso); 
-        System.out.println("Filme: " + ingresso.getFilme().getNome());
-        System.out.println("Sessão" + ingresso.getHorarioSessao());
-        System.out.println("Ingressos inteiros: " + ingresso.getQuantidadeInteira());
-        System.out.println("Ingressos de meia-entrada: " + ingresso.getQuantidadeMeia());
-        System.out.println("Total a pagar" + total);
+        System.out.println("Filme selecinado: " + ingresso.getFilme().getNome());
+        System.out.println("Sessão escolhida: " +  ingresso.getHorarioSessao());
+        System.out.println("Total de ingressos inteiros: " + ingresso.getQuantidadeInteira());
+        System.out.println("Total de ingressos de meia-entrada: " + ingresso.getQuantidadeMeia());
+        System.out.println("TOTAL A PAGAR: "  + "R$" +total );
+        System.out.println(); 
     }
     
     private double calcularTotal(Ingresso ingresso) {
 
-        final double precoInteiro = 24.0;
-        final double precoMeia = 12.0;
+        final double precoInteiro = 24.00;
+        final double precoMeia = 12.00;
         return ingresso.getQuantidadeInteira()* precoInteiro + ingresso.getQuantidadeMeia() * precoMeia;
 
     }

@@ -25,6 +25,14 @@ public class Main {
 
         if (escolhaFilmeIndex != -1) {
             Filme filmeEscolhido = filmes.get(escolhaFilmeIndex);
+            String sessao = menuController.selecionarSessao();
+            if (sessao != null ) {
+                Ingresso ingresso = menuController.comprarIngesso(filmeEscolhido, sessao);
+                menuController.exibirResultadoFinal(ingresso);
+                
+            }else {
+                System.out.println("Sessão inválida");
+            }
 
             
         }

@@ -4,14 +4,16 @@ public class Filme {
     private String descricao ;
     private String genero;
     private double duracao ;
+    private boolean filme3D;
 
 
-    public Filme(String nome, String diretor, String descricao, String genero, double duracao) {
+    public Filme(String nome, String diretor, String descricao, String genero, double duracao, boolean filme3D) {
         this.nome=nome;
         this.diretor= diretor;
         this.descricao= descricao;
         this.genero= genero;
         this.duracao= duracao;
+        this.filme3D = filme3D;
 
 
     }
@@ -59,5 +61,13 @@ public class Filme {
 
     public void setDuracao(double duracao) {
         this.duracao = duracao;
+    }
+
+    public boolean isfilme3D() {
+        return filme3D;
+    }
+
+    public void setFilme3D () {
+        this.filme3D = filme3D;
     }
 }
